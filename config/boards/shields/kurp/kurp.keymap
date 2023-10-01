@@ -6,11 +6,11 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#include "no_nb.h"
-#include "helper.h"
-#include "keys.h"
+#include "../../../no_nb.h"
+#include "../../../helper.h"
+#include "../../../keys.h"
+#include "../../../combos.h"
 // #include "bluetooth.h"
-#include "combos.h"
 
 #define L0 0
 #define L1 1
