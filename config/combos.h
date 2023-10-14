@@ -12,7 +12,7 @@
 
 ZMK_COMBO(_BKSP,  &kp BKSP,   17 18, 0)
 ZMK_COMBO(_DEL,   &kp DEL,     7  8, 0)
-ZMK_COMBO(_ENTER, &kp ENTER,  16 27, 0)
+ZMK_COMBO(_ENTER, &kp ENTER,  16 17, 0)
 ZMK_COMBO(_ESC,   &kp ESC,    11 12, 0)
 ZMK_COMBO(_INS,   &kp INS,     6  7, 0)
 ZMK_COMBO(_TAB,   &kp TAB,    12 13, 0)
