@@ -164,7 +164,13 @@ ZMK_BEHAVIOR(_tt, hold_tap,
     bindings = <&kp>, <&kp>;
 )
 
-#define ZMK_PAIR(name, bind0, bind1, bind2) \
+#define ZMK_PAIR(name, bind0, bind1) \
+  ZMK_BEHAVIOR(name, mod_morph, \
+    bindings = <&kp bind0>, <&kp bind1>; \
+    mods = <(MOD_LSFT|MOD_RSFT)>; \
+  )
+
+#define ZMK_MOD_PAIR(name, bind0, bind1, bind2) \
   ZMK_BEHAVIOR(name, mod_morph, \
     bindings = <&_tt bind1 bind0>, <&kp bind2>; \
     mods = <(MOD_LSFT|MOD_RSFT)>; \
