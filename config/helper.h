@@ -155,7 +155,7 @@
     UC_MACRO(name ## _upper, &kp U0 &kp U1 &kp U2 &kp U3) \
     UC_MODMORPH(name, &name ## _lower, &name ## _upper)
 
-ZMK_BEHAVIOR(_tt, hold_tap,
+ZMK_BEHAVIOR(tt, hold_tap,
     flavor="tap-preferred";
     tapping-term-ms=<200>;
     quick-tap-ms=<100>;
@@ -172,6 +172,6 @@ ZMK_BEHAVIOR(_tt, hold_tap,
 
 #define ZMK_MOD_PAIR(name, bind0, bind1, bind2) \
   ZMK_BEHAVIOR(name, mod_morph, \
-    bindings = <&_tt bind1 bind0>, <&kp bind2>; \
+    bindings = <&tt bind1 bind0>, <&kp bind2>; \
     mods = <(MOD_LSFT|MOD_RSFT)>; \
   )
