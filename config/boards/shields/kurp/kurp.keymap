@@ -19,7 +19,7 @@
 #define L3 3
 
 #define _ &none
-&caps_word { continue-list = <__UNDER __MINUS BKSP DEL __AE __OE __AA>; };
+&caps_word { continue-list = <_0_UNDER _0_MINUS BKSP DEL _2_AE _2_OE _2_AA>; };
 
 / {
     macros {

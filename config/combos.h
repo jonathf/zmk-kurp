@@ -8,11 +8,9 @@
   ╰────┴────┴────┴────╯  ╰────┴────┴────┴────╯
            30   31   32 33   34   35
 */
-#include "helper.h"
-
-ZMK_COMBO(_BKSP,  &kp BKSP,   17 18, 0)
-ZMK_COMBO(_DEL,   &kp DEL,     7  8, 0)
-ZMK_COMBO(_ENTER, &kp ENTER,  16 17, 0)
-ZMK_COMBO(_ESC,   &kp ESC,    11 12, 0)
-ZMK_COMBO(_INS,   &kp INS,     6  7, 0)
-ZMK_COMBO(_TAB,   &kp TAB,    12 13, 0)
+ZMK_COMBO(_9_BKSP,  &kp BKSP,   17 18, 0)
+ZMK_COMBO(_9_DEL,   &kp DEL,     7  8, 0)
+ZMK_COMBO(_9_ENTER, &kp ENTER,  16 17, 0)
+ZMK_COMBO(_9_ESC,   &kp ESC,    11 12, 0)
+ZMK_COMBO(_9_INS,   &kp INS,     6  7, 0)
+ZMK_COMBO(_9_TAB,   &kp TAB,    12 13, 0)

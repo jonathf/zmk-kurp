@@ -1,5 +1,4 @@
-#include "helper.h"
-// HOST_OS: 0 iso, 1 linux, 2 macos nb, 3 macos unicode
+// HOST_OS: 0 iso, 2 macos unicode
 
 #define _0_PIPE PIPE
 #define _PIPE &kp _0_PIPE
