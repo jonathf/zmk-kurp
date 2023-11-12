@@ -59,8 +59,8 @@ ZMK_PAIR(_N5_F5, N5, F5)
 ZMK_PAIR(_N6_F6, N6, F6)
 #define _N6 &_N6_F6
 
-ZMK_UNICODE_PAIR(_2_AE, N0, N0, E, N6, N0, N0, C, N6)
-#define _AE &_2_AE
+ZMK_UNICODE_PAIR(_2_OE, N0, N0, F, N8, N0, N0, D, N8)
+#define _OE &_2_OE
 
 #define _0_PRCNT PRCNT
 #define _PRCNT &kp _0_PRCNT
