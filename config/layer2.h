@@ -29,7 +29,7 @@ ZMK_PAIR(_N9_F9, N9, F9)
 #define _N9 &_N9_F9
 
 ZMK_UNICODE_PAIR(_2_AA, N0, N0, E, N5, N0, N0, C, N5)
-#define _AA &__AA
+#define _AA &_2_AA
 
 #define _0_STAR STAR
 #define _STAR &kp _0_STAR
@@ -59,6 +59,8 @@ ZMK_PAIR(_N5_F5, N5, F5)
 ZMK_PAIR(_N6_F6, N6, F6)
 #define _N6 &_N6_F6
 
+ZMK_UNICODE_PAIR(_2_AE, N0, N0, E, N6, N0, N0, C, N6)
+#define _AE &_2_AE
 ZMK_UNICODE_PAIR(_2_OE, N0, N0, F, N8, N0, N0, D, N8)
 #define _OE &_2_OE
 
