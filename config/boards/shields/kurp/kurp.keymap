@@ -6,11 +6,12 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#include "../../../no_nb.h"
 #include "../../../helper.h"
-#include "../../../keys.h"
+#include "../../../layer1.h"
+#include "../../../layer2.h"
+#include "../../../layer3.h"
+#include "../../../layer4.h"
 #include "../../../combos.h"
-// #include "bluetooth.h"
 
 #define L0 0
 #define L1 1
@@ -19,23 +20,6 @@
 
 #define _ &none
 &caps_word { continue-list = <__UNDER __MINUS BKSP DEL __AE __OE __AA>; };
-
-ZMK_BEHAVIOR(tt, hold_tap,
-    flavor="tap-preferred";
-    tapping-term-ms=<200>;
-    quick-tap-ms=<100>;
-    global-quick-tap;
-    hold-trigger-on-release;
-    bindings = <&kp>, <&kp>;
-)
-ZMK_BEHAVIOR(ht, hold_tap,
-    flavor="balanced";
-    tapping-term-ms=<200>;
-    quick-tap-ms=<100>;
-    global-quick-tap;
-    hold-trigger-on-release;
-    bindings = <&kp>, <&kp>;
-)
 
 / {
     macros {
@@ -51,34 +35,34 @@ ZMK_BEHAVIOR(ht, hold_tap,
         layer_0 { bindings = <
 //  ╭────────┬────────┬────────┬────────┬────────╮ ╭────────┬────────┬────────┬────────┬────────╮
       _Q       _W       _E       _R       _T         _Y       _U       _I       _O       _P
-      _A       _S       _D       _F       _G         _H       _J       _K       _L       &_BKSP
-      _Z       _X       _C       _V       _B         _N       _M       &_COMMA  &_DOT    &_SLASH
+      _A       _S       _D       _F       _G         _H       _J       _K       _L       _BKSP
+      _Z       _X       _C       _V       _B         _N       _M       _COMMA   _DOT     _SLASH
 //  ╰────────┼────────┴────────┼────────┴────────┤ ├────────┴────────┼────────┴────────┼────────╯
-    &none      &capsword         &kp SPACE           &sl L1            &sl L2            &sl L3
+        _      &capsword         &kp SPACE           &sl L1            &sl L2            &sl L3
         >; };
         layer_1 { bindings = <
 //  ╭────────┬────────┬────────┬────────┬────────╮ ╭────────┬────────┬────────┬────────┬────────╮
-      &_EXCL   &_AT     &_LBRC   &_RBRC   &_EQUAL    &_PLUS   &_N7     &_N8     &_N9     _AA
-      &_STAR   &_DQT    &_LPAR   &_RPAR   &_DOLLAR   &_MINUS  &_N4     &_N5     &_N6     _OE
-      &_PRCNT  &_CARET  &_LBKT   &_RBKT   _UNDER     &_N0     &_N1     &_N2     &_N3     _AE
+      _EXCL    _AT      _LBRC    _RBRC    _EQUAL     _PLUS    _N7      _N8      _N9      _AA
+      _STAR    _DQT     _LPAR    _RPAR    _DOLLAR    _MINUS   _N4      _N5      _N6      _OE
+      _PRCNT   _CARET   _LBKT    _RBKT    _UNDER     _N0      _N1      _N2      _N3      _AE
 //  ╰────────┼────────┴────────┼────────┴────────┤ ├────────┴────────┼────────┴────────┼────────╯
-    &trans     &trans            &trans              &trans            &trans            &trans
+    _          _                 _                   _                 _                 _
         >; };
         layer_2 { bindings = <
 //  ╭────────┬────────┬────────┬────────┬────────╮ ╭────────┬────────┬────────┬────────┬────────╮
-      _PIPE    _PARA    _LDANG   _RDANG   _QMARK     &_HOME   &_PG_DN  &_PG_UP  &_END    _PSCRN
-      _HASH    _SQT     _LT      _GT      _AMPS      &_LEFT   &_DOWN   &_UP     &_RIGHT  &_INS
-      _EURO    _TILDE   _GRAVE   _ACUTE   &none      &kp LGUI &kp LSHIFT &kp LCTRL &kp LALT &kp RALT
+      _PIPE    _PARA    _LDANG   _RDANG   _QMARK     _HOME    _PG_DN   _PG_UP   _END     _PSCRN
+      _HASH    _SQT     _LT      _GT      _AMPS      _LEFT    _DOWN    _UP      _RIGHT   _
+      _EURO    _TILDE   _GRAVE   _ACUTE   _          _GUI     _SHIFT   _CTRL    _LALT    _RALT
 //  ╰────────┼────────┴────────┼────────┴────────┤ ├────────┴────────┼────────┴────────┼────────╯
-      &trans   &trans            &trans              &to L0            &trans            &trans
+      _        _                 _                   &to L0            _                 _
         >; };
         layer_3 { bindings = <
 //  ╭────────┬────────┬────────┬────────┬────────╮ ╭────────┬────────┬────────┬────────┬────────╮
-      _        _        _        _        _          _     _            _             _             _
-      _        _        _        _        _          _     &bt BT_SEL 3 _             _             &bt BT_CLR
-      _        _        _        _        _          _     &bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2  _
+      _        _        _        _        _          _        _        _        _        _
+      _        _        _        _        _          _        _BT3     _        _        _BTCLR
+      _        _        _        _        _          _        _BT0     _BT1     _BT2     _
 //  ╰────────┼────────┴────────┼────────┴────────┤ ├────────┴────────┼────────┴────────┼────────╯
-      &trans   &trans            &trans              &sl L2            &trans            &trans
+      _        _                 _                   &sl L2            _                 _
         >; };
     };
 };
