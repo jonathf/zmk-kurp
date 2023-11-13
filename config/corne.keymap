@@ -1,0 +1,63 @@
+// Copyright (c) 2022 The ZMK Contributors
+// SPDX-License-Identifier: MiT
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
+
+#define HOST_OS 2
+#include "helper.h"
+#include "layer1.h"
+#include "layer2.h"
+#include "layer3.h"
+#include "layer4.h"
+#include "combos.h"
+
+// sd&caps_word { continue-list = <__UNDER __MINUS BKSP DEL>; };
+
+/ {
+    macros {
+        capsword: capsword {
+            label = "capsword";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to L0>, <&caps_word>;
+        };
+    };
+    keymap {
+        compatible = "zmk,keymap";
+        layer_0 { bindings = <
+//  ╭────────┬────────┬────────┬────────┬────────╮ ╭────────┬────────┬────────┬────────┬────────╮
+    _ _Q       _W       _E       _R       _T         _Y       _U       _I       _O       _P     _
+    _ _A       _S       _D       _F       _G         _H       _J       _K       _L       _BKSP  _
+    _ _Z       _X       _C       _V       _B         _N       _M       _COMMA   _DOT     _SLASH _
+//  ╰────────┼────────┴────────┼────────┴────────┤ ├────────┴────────┼────────┴────────┼────────╯
+     _         &capsword         &kp SPACE           &sl L1            &sl L2            &sl L3
+        >; };
+        layer_1 { bindings = <
+//  ╭────────┬────────┬────────┬────────┬────────╮ ╭────────┬────────┬────────┬────────┬────────╮
+    _ _EXCL    _AT      _LBRC    _RBRC    _EQUAL     _PLUS    _N7      _N8      _N9     _AA     _
+    _ _STAR    _DQT     _LPAR    _RPAR    _DOLLAR    _MINUS   _N4      _N5      _N6     _OE     _
+    _ _PRCNT   _CARET   _LBKT    _RBKT    _UNDER     _N0      _N1      _N2      _N3     _AE     _
+//  ╰────────┼────────┴────────┼────────┴────────┤ ├────────┴────────┼────────┴────────┼────────╯
+    _          _                 _                   _                 _                 _
+        >; };
+        layer_2 { bindings = <
+//  ╭────────┬────────┬────────┬────────┬────────╮ ╭────────┬────────┬────────┬────────┬────────╮
+    _ _PIPE    _PARA    _LDANG   _RDANG   _QMARK     _HOME    _PG_DN   _PG_UP   _END     _PSCRN _
+    _ _HASH    _SQT     _LT      _GT      _AMPS      _LEFT    _DOWN    _UP      _RIGHT   _INS   _
+    _ _EURO    _TILDE   _GRAVE   _ACUTE   &none      _LGUI    _LSHIFT  _LCTRL   _LALT    _RALT  _
+//  ╰────────┼────────┴────────┼────────┴────────┤ ├────────┴────────┼────────┴────────┼────────╯
+      _        _                 _                   &to L0            _                 _
+        >; };
+        layer_3 { bindings = <
+//  ╭────────┬────────┬────────┬────────┬────────╮ ╭────────┬────────┬────────┬────────┬────────╮
+    _ _        _        _        _        _          _        _        _        _        _      _
+    _ _        _        _        _        _          _        _BT3     _        _        _BTCLR _
+    _ _        _        _        _        _          _        _BT0     _BT1     _BT2     _      _
+//  ╰────────┼────────┴────────┼────────┴────────┤ ├────────┴────────┼────────┴────────┼────────╯
+      _        _                 _                   &sl L2            _                 _
+        >; };
+    };
+};
