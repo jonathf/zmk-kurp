@@ -10,7 +10,7 @@
            30   31   32 33   34   35
 */
 ZMK_COMBO(_9_Q,  &kp Q,    1  2, 0)
-ZMK_COMBO(_9_Z,  &kp Z,   20 21, 0)
+ZMK_COMBO(_9_Z,  &kp Z,   21 22, 0)
 
 ZMK_COMBO(_9_BKSP,  &kp BKSP,   17 18, 0)
 ZMK_COMBO(_9_DEL,   &kp DEL,     7  8, 0)

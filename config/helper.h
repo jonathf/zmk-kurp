@@ -7,6 +7,11 @@
 
 #pragma once
 
+#define L0 0
+#define L1 1
+#define L2 2
+#define L3 3
+#define _ &none
 #define ZMK_HELPER_STRINGIFY(x) #x
 
 /* ZMK_BEHAVIOR */
