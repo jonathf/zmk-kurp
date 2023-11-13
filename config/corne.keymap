@@ -46,8 +46,8 @@
         layer_2 { bindings = <
 //  ╭────────┬────────┬────────┬────────┬────────╮ ╭────────┬────────┬────────┬────────┬────────╮
     _ _PIPE    _PARA    _LDANG   _RDANG   _QMARK     _HOME    _PG_DN   _PG_UP   _END     _PSCRN _
-    _ _HASH    _SQT     _LT      _GT      _AMPS      _LEFT    _DOWN    _UP      _RIGHT   _INS   _
-    _ _EURO    _TILDE   _GRAVE   _ACUTE   &none      _LGUI    _LSHIFT  _LCTRL   _LALT    _RALT  _
+    _ _HASH    _SQT     _LT      _GT      _AMPS      _LEFT    _DOWN    _UP      _RIGHT   _      _
+    _ _EURO    _TILDE   _GRAVE   _ACUTE   _          _LGUI    _LSHIFT  _LCTRL   _LALT    _RALT  _
 //  ╰────────┼────────┴────────┼────────┴────────┤ ├────────┴────────┼────────┴────────┼────────╯
       _        _                 _                   &to L0            _                 _
         >; };
